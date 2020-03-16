@@ -75,7 +75,6 @@ a {
   font-family: 'Pridi', serif;
   font-weight: bold;
   color: #FFFFFF;
-  text-shadow: 1.5px 1.5px #9D9FA1;
   padding: 0;
   text-decoration: none;
   text-transform: uppercase;
@@ -105,8 +104,8 @@ h1 {
 .menu {
   margin-left: 2vw;
   color: #FFFFFF;
-  font-size: 2.6vh;
-  opacity: 90%;
+  font-size: 2vh;
+  letter-spacing: 2px;
 }
 
 .menu:hover {
@@ -132,6 +131,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  border-bottom: 2.5px solid #9C9E9F;
 }
 
 /* ----------------------SECTIONER---------------------- */
@@ -144,7 +144,7 @@ body {
 #section2 {
   position: relative;
   height: 100vh;
-  background-color: #BEE0D9;
+  background-color: #093A82;
 }
 
 #section3 {
@@ -162,5 +162,5 @@ body {
 #section5 {
   position: relative;
   height: 100vh;
-  background-color: #BEE0D9;
+  background-color: #093A82;
 }
