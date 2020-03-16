@@ -1,0 +1,166 @@
+/* ----------------------LOADING PAGE------------------ */
+#load {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+  background: url("https://www.widewalls.ch/ww-apps-lib/ww-apps-extensions/Travel/images/page_loader.gif") no-repeat center center rgba(255, 255, 255, 1)
+}
+
+/* ----------------------VIDEO------------------ */
+#myVideo {
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 4;
+}
+
+/* ----------------------BILLEDER------------------ */
+.logo {
+  width: 25vw;
+  position: absolute;
+  right: 2vw;
+  top: 1vh;
+  max-height: 100%;
+}
+
+.gfk1 {
+  width: 15vw;
+  position: absolute;
+  right: 0vw;
+  bottom: -1.5vh;
+}
+
+.gfk2 {
+  width: 20vw;
+  position: absolute;
+  left: -2vw;
+  bottom: -1.5vh;
+}
+
+.label {
+  width: 70vh;
+  position: absolute;
+  left: -17vw;
+  bottom: -20.5vh;
+}
+
+nav {
+  position: fixed;
+  top: 1.5vh;
+  left: 2vw;
+  flex-direction: row;
+  display: flex;
+  width: 100vw;
+  padding-top: 1vh;
+  z-index: 3;
+}
+
+.pil {
+  width: 7vh;
+}
+
+.pilOp {
+  width: 7vh;
+  transform: rotate(180deg);
+}
+
+/* ----------------------TEKST------------------ */
+p {
+  font-family: 'Raleway', sans-serif;
+}
+
+a {
+  font-family: 'Pridi', serif;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-shadow: 1.5px 1.5px #9D9FA1;
+  padding: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* Næste-side knap */
+.next {
+  position: absolute;
+  bottom: 2vh;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+/* Overskifter*/
+h1 {
+  font-family: 'Noto Serif TC', serif;
+  text-transform: uppercase;
+  position: absolute;
+  top: 40vh;
+  width: 100%;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+/* Menu-punkter */
+.menu {
+  margin-left: 2vw;
+  color: #FFFFFF;
+  font-size: 2.6vh;
+  opacity: 90%;
+}
+
+.menu:hover {
+  opacity: 50%;
+}
+
+/* ----------------------GENERELT------------------ */
+html,
+body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+.mainWrapper {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.main {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* ----------------------SECTIONER---------------------- */
+#section1 {
+  position: relative;
+  height: 100vh;
+  background-color: #FAC177;
+}
+
+#section2 {
+  position: relative;
+  height: 100vh;
+  background-color: #BEE0D9;
+}
+
+#section3 {
+  position: relative;
+  height: 100vh;
+  background-color: #FAC177;
+}
+
+#section4 {
+  position: relative;
+  height: 100vh;
+  background-color: #FAC177;
+}
+
+#section5 {
+  position: relative;
+  height: 100vh;
+  background-color: #BEE0D9;
+}

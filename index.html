@@ -4,101 +4,18 @@
 <head>
   <meta charset="utf-8">
   <title>Kampagne: Tuborg Nul</title>
-  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+TC|Raleway&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pridi&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+
 </head>
 
 <body>
-  <style>
-    nav {
-      position: fixed;
-      top: 1vh;
-      left: 2vw;
-      flex-direction: row;
-      display: flex;
-      width: 100vw;
-      padding-top: 1vh;
-      z-index: 3;
-    }
+  <div id="load"></div>
 
-    .mainWrapper {
-      position: relative;
-      margin: 0;
-      padding: 0;
-      height: 100%;
-
-    }
-
-    .menu {
-      margin-left: 2vw;
-      font-size: 2vh;
-    }
-
-    .main {
-      margin: 0;
-      padding: 0;
-    }
-
-    a {
-      color: #093A82;
-      padding: 0;
-      text-decoration: none;
-    }
-
-    .next {
-      position: absolute;
-      bottom: 2vh;
-      width: 100%;
-      text-align: center;
-    }
-
-    h1 {
-      position: absolute;
-      top: 2vh;
-      width: 100%;
-      text-align: center;
-    }
-
-    html,
-    body {
-      font-family: 'Abril Fatface', cursive;
-      scroll-behavior: smooth;
-      margin: 0;
-      padding: 0;
-    }
-
-    #section1 {
-      position: relative;
-      height: 100vh;
-      background-color: #FAC177;
-    }
-
-    #section2 {
-      position: relative;
-      height: 100vh;
-      background-color: #BEE0D9;
-    }
-
-    #section3 {
-      position: relative;
-      height: 100vh;
-      background-color: #9C9E9F;
-    }
-
-    #section4 {
-      position: relative;
-      height: 100vh;
-      background-color: #FAC177;
-    }
-
-    #section5 {
-      position: relative;
-      height: 100vh;
-      background-color: #BEE0D9;
-    }
-  </style>
-  </head>
-
-  <div class="mainWrapper">
+  <div id="mainWrapper">
 
     <!-- //Menu bar i venstre top -->
     <nav><a class="menu" href="index.html">Kampagne</a>
@@ -108,38 +25,46 @@
 
     <!-- //Section 1 -->
     <div class="main" id="section1">
-      <h1>Præsentationsside</h1>
-      <a class="next" href="#section2">Click Me</a>
+      <h1>Præsentation</h1>
+      <a class="next" href="#section2"><img src="img/pilen-hvid.svg" class="pil" alt="Gå videre til næste side"></a>
+      <img class="gfk2" src="img/daa-wet.png" alt="Våd Tuborg Flaske">
     </div>
 
     <!-- //Section 2 -->
     <div class="main" id="section2">
       <h1>InfoGrafik om Alkohol-fri<br> øl generelt</h1>
-      <a class="next" href="#section3">Click Me</a>
+      <a class="next" href="#section3"> <img src="img/pilen-hvid.svg" class="pil" alt="Gå videre til næste side"> </a>
+      <img class="gfk1" src="img/flsk-wet.png" alt="Våd Tuborg Flaske">
     </div>
 
     <!-- //Section 3 -->
     <div class="main" id="section3">
 
       <h1>Data</h1>
-      <a class="next" href="#section4">Click Me</a>
+      <a class="next" href="#section4"><img src="img/pilen-hvid.svg" class="pil" alt="Gå videre til næste side"></a>
+      <img class="label" src="img/emblem.svg" alt="Logo">
     </div>
 
     <!-- //Section 4 -->
     <div class="main" id="section4">
 
-      <h1>Video</h1>
-      <a class="next" href="#section5">Click Me</a>
+
+      <a class="next" href="#section5"><img src="img/pilen-hvid.svg" class="pil" alt="Gå videre til næste side"></a>
+      <video autoplay muted loop id="myVideo">
+        <source src="rick.mp4" type="video/mp4">
+        Din browser understøtter ikke HTML5, din noob!
+      </video>
     </div>
 
     <!-- //Section 5 -->
     <div class="main" id="section5">
 
       <h1>Pas! Slutning?</h1>
-      <a class="next" href="#section6">Click Me</a>
+      <a class="next" href="#section1"><img src="img/pilen-hvid.svg" class="pilOp" alt="Gå tilbage til top"></a>
     </div>
 
   </div>
+
 </body>
 
 </html>
