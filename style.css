@@ -5,7 +5,8 @@
   position: fixed;
   z-index: 9999;
   background: url("https://miro.medium.com/max/1600/1*5ngZiNtGMrp_xmZHxSvJ0g.gif") no-repeat center center rgba(255, 255, 255, 1)
-    /*background: url("https://www.widewalls.ch/ww-apps-lib/ww-apps-extensions/Travel/images/page_loader.gif") no-repeat center center rgba(255, 255, 255, 1) */
+    /* LOADER-GIF: HER ER EN HVID VERSION - MED TO TANDHJUL.
+    background: url("https://www.widewalls.ch/ww-apps-lib/ww-apps-extensions/Travel/images/page_loader.gif") no-repeat center center rgba(255, 255, 255, 1) */
 }
 
 /* ----------------------VIDEO------------------ */
@@ -47,7 +48,7 @@
   bottom: -20.5vh;
 }
 
-nav {
+.mainNav {
   position: fixed;
   top: 1.5vh;
   left: 2vw;
