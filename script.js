@@ -7,6 +7,6 @@ document.onreadystatechange = function() {
       document.getElementById('interactive');
       document.getElementById('load').style.visibility = "hidden";
       document.getElementById('mainWrapper').style.visibility = "visible";
-    }, 1000);
+    }, 4500);
   }
 }
