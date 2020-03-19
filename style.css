@@ -1,12 +1,45 @@
-/* ----------------------LOADING PAGE------------------ */
+/* Næste-side knap */
+.next {
+  position: absolute;
+  bottom: 2vh;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+/* ---------------------- ANIMATION KLASSE------------------ */
+.block.is-visible {
+  opacity: 1;
+}
+
+.block {
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  opacity: 0;
+  transition:
+    opacity 1s .25s ease-out;
+  width: 100%
+}
+
+/* ---------------------- PAGE LOADER------------------ */
 #load {
   width: 100%;
   height: 100%;
   position: fixed;
   z-index: 9999;
   background: url("https://miro.medium.com/max/1600/1*5ngZiNtGMrp_xmZHxSvJ0g.gif") no-repeat center center rgba(255, 255, 255, 1)
-    /* LOADER-GIF: HER ER EN HVID VERSION - MED TO TANDHJUL.
+    /* ALTERNATIV LOADER-GIF: HER ER EN HVID VERSION - MED TO TANDHJUL.
     background: url("https://www.widewalls.ch/ww-apps-lib/ww-apps-extensions/Travel/images/page_loader.gif") no-repeat center center rgba(255, 255, 255, 1) */
+}
+
+/* ----------------------Content div til hver section------------------ */
+.content {
+  height: 100vh;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
 }
 
 /* ----------------------VIDEO------------------ */
@@ -28,27 +61,45 @@
 }
 
 .gfk1 {
-  width: 15vw;
+  width: 23vw;
   position: absolute;
-  right: 0vw;
+  right: -5vw;
   bottom: -1.5vh;
+  z-index: 3;
 }
 
 .gfk2 {
-  width: 20vw;
+  width: 23vw;
   position: absolute;
   left: -2vw;
   bottom: -1.5vh;
+  z-index: 3;
+}
+
+.gfk3 {
+  width: 65vw;
+  position: absolute;
+  right: -22vw;
+  bottom: -2.5vh;
+  z-index: 3;
 }
 
 .label {
-  width: 70vh;
+  width: 40vh;
   position: absolute;
-  left: -17vw;
-  bottom: -20.5vh;
+  left: -12vh;
+  bottom: -15.5vh;
 }
 
-.mainNav {
+.gfk4 {
+  width: 35vh;
+  position: absolute;
+  left: -15vh;
+  bottom: -7vh;
+  z-index: 2;
+}
+
+#mainNav {
   position: fixed;
   top: 1.5vh;
   left: 2vw;
@@ -69,12 +120,44 @@
 }
 
 /* ----------------------TEKST------------------ */
+/* Brødtekst */
 p {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  color: #FFFFFF;
+  font-size: 1.7vh;
+  font-weight: lighter;
 }
 
+/* Citat */
+h3 {
+  font-family: 'Dosis', sans-serif;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2vh;
+  padding-top: 1vw;
+}
+
+/* Afgiver af citat */
+h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: lighter;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-align: right;
+  margin: 0;
+  font-size: 1.2vh;
+  padding-bottom: 1vw;
+}
+
+/* Links */
 a {
-  font-family: 'Pridi', serif;
+  font-family: 'Dosis', sans-serif;
   font-weight: bold;
   color: #FFFFFF;
   padding: 0;
@@ -82,24 +165,37 @@ a {
   text-transform: uppercase;
 }
 
-/* Næste-side knap */
-.next {
-  position: absolute;
-  bottom: 2vh;
-  width: 100%;
-  text-align: center;
-  z-index: 1;
-}
-
 /* Overskifter*/
 h1 {
-  font-family: 'Noto Serif TC', serif;
+  position: relative;
+  font-size: 4vh;
+  z-index: 1;
+  overflow: hidden;
+  text-align: center;
+  font-family: 'Dosis', sans-serif;
   text-transform: uppercase;
-  position: absolute;
-  top: 40vh;
   width: 100%;
   text-align: center;
   color: #FFFFFF;
+  z-index: 1;
+  overflow: hidden;
+  margin-top: 12vh;
+  font-weight: bolder;
+}
+
+h1:before, h1:after {
+  position: absolute;
+  top: 51%;
+  overflow: hidden;
+  width: 50%;
+  height: 3px;
+  content: '\a0';
+  background-color: #FFFFFF;
+}
+
+h1:before {
+  margin-left: -50%;
+  text-align: right;
 }
 
 /* Menu-punkter */
@@ -108,12 +204,14 @@ h1 {
   color: #FFFFFF;
   font-size: 2vh;
   letter-spacing: 2px;
+  opacity: 90%;
 }
 
 .menu:hover {
-  opacity: 50%;
+  opacity: 30%;
 }
 
+/* Menu-punkter */
 /* ----------------------GENERELT------------------ */
 html,
 body {
@@ -132,8 +230,8 @@ body {
 .main {
   margin: 0;
   padding: 0;
-  overflow: hidden;
   border-bottom: 2.5px solid #9C9E9F;
+  overflow: hidden;
 }
 
 /* ----------------------SECTIONER---------------------- */
@@ -165,4 +263,165 @@ body {
   position: relative;
   height: 100vh;
   background-color: #093A82;
+}
+
+@media only screen and (min-device-width: 600px) {
+  p {
+    font-size: 2.5vh
+  }
+
+  h1 {
+    font-size: 3vh;
+  }
+
+  h3 {
+    font-size: 2.5vh;
+    padding-top: 1vw;
+  }
+
+  h4 {
+    padding-bottom: 1vw;
+    font-size: 1.5vh;
+  }
+
+  .main {
+    overflow: hidden;
+  }
+
+  /* Næste-side knap */
+  .next {
+    position: absolute;
+    bottom: 2vh;
+    width: 100%;
+    text-align: center;
+    z-index: 9999;
+  }
+
+  .content {
+    height: 100vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+  }
+
+  /* ----------------------BILLEDER------------------ */
+  .logo {
+    width: 25vw;
+    position: absolute;
+    right: 2vw;
+    top: 1vh;
+    max-height: 100%;
+  }
+
+  .gfk1 {
+    width: 23vw;
+    position: absolute;
+    right: -2vw;
+    bottom: -1.5vh;
+  }
+
+  .gfk2 {
+    width: 23vw;
+    position: absolute;
+    left: -2vw;
+    bottom: -1.5vh;
+  }
+
+  .gfk3 {
+    width: 65vw;
+    position: absolute;
+    right: -15vw;
+    bottom: -2.5vh;
+  }
+
+  .label {
+    width: 40vh;
+    position: absolute;
+    left: -12vh;
+    bottom: -15.5vh;
+  }
+}
+
+@media only screen and (min-device-width: 1500px) {
+  p {
+    font-size: 2.5vh
+  }
+
+  h1 {
+    font-size: 3vh;
+    margin: 0;
+    margin-bottom: 5vh;
+    margin-top: -10vh;
+  }
+
+  h3 {
+    font-size: 2.5vh;
+    padding-top: 1vw;
+  }
+
+  h4 {
+    font-size: 1.5vh;
+    padding-bottom: 1vw;
+  }
+
+  .main {
+    overflow: hidden;
+  }
+
+  /* Næste-side knap */
+  .next {
+    position: absolute;
+    bottom: 2vh;
+    width: 100%;
+    text-align: center;
+    z-index: 9999;
+  }
+
+  .content {
+    height: 100vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }
+
+  /* ----------------------BILLEDER------------------ */
+  .logo {
+    width: 15vw;
+    position: absolute;
+    right: 2vw;
+    top: 1vh;
+    max-height: 100%;
+  }
+
+  .gfk1 {
+    width: 13vw;
+    position: absolute;
+    right: -2vw;
+    bottom: -1.5vh;
+  }
+
+  .gfk2 {
+    width: 13vw;
+    position: absolute;
+    left: -2vw;
+    bottom: -1.5vh;
+  }
+
+  .gfk3 {
+    width: 65vw;
+    position: absolute;
+    right: -15vw;
+    bottom: -2.5vh;
+  }
+
+  .label {
+    width: 40vh;
+    position: absolute;
+    left: -12vh;
+    bottom: -15.5vh;
+  }
 }
