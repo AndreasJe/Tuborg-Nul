@@ -1,32 +1,3 @@
-.verNav {
-  position: absolute;
-  top: 35vh;
-  right: 2vw;
-  flex-direction: column;
-  display: flex;
-  height: 100%;
-  padding-top: 1vh;
-  z-index: 99999999;
-}
-
-.verNav a {
-  display: block;
-  margin-top: 100px;
-  height: 15px;
-  width: 15px;
-  border-radius: 100%;
-  border: 1px solid black;
-  background: #9C9E9F;
-}
-
-.verNav a:hover {
-  background: #FAC177;
-}
-
-.verNav a:active {
-  background: white;
-}
-
 /* ---------------------- ANIMATION KLASSE------------------ */
 .block.is-visible {
   opacity: 1;
@@ -47,7 +18,7 @@
   width: 100%;
   height: 100%;
   position: fixed;
-  z-index: 9999;
+  z-index: 9999999999;
   background: url("https://miro.medium.com/max/1600/1*5ngZiNtGMrp_xmZHxSvJ0g.gif") no-repeat center center rgba(255, 255, 255, 1)
     /* ALTERNATIV LOADER-GIF: HER ER EN HVID VERSION - MED TO TANDHJUL.
     background: url("https://www.widewalls.ch/ww-apps-lib/ww-apps-extensions/Travel/images/page_loader.gif") no-repeat center center rgba(255, 255, 255, 1) */
