@@ -1,10 +1,30 @@
-/* Næste-side knap */
-.next {
+.verNav {
   position: absolute;
-  bottom: 2vh;
-  width: 100%;
-  text-align: center;
-  z-index: 1;
+  top: 35vh;
+  right: 2vw;
+  flex-direction: column;
+  display: flex;
+  height: 100%;
+  padding-top: 1vh;
+  z-index: 99999999;
+}
+
+.verNav a {
+  display: block;
+  margin-top: 100px;
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  border: 1px solid black;
+  background: #9C9E9F;
+}
+
+.verNav a:hover {
+  background: #FAC177;
+}
+
+.verNav a:active {
+  background: white;
 }
 
 /* ---------------------- ANIMATION KLASSE------------------ */
@@ -92,10 +112,10 @@
 }
 
 .gfk4 {
-  width: 35vh;
+  width: 45vh;
   position: absolute;
-  left: -15vh;
-  bottom: -7vh;
+  right: -20vh;
+  bottom: 0vh;
   z-index: 2;
 }
 
@@ -412,9 +432,9 @@ body {
   }
 
   .gfk3 {
-    width: 65vw;
+    width: 15vw;
     position: absolute;
-    right: -15vw;
+    right: -4vw;
     bottom: -2.5vh;
   }
 

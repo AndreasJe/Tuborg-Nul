@@ -12,7 +12,6 @@ document.onreadystatechange = function() {
 }
 
 
-
 //
 // // SCROLL LOOP FUNKTION. SER EFTER OM ET ELEMENT ER I VIEWPORT OG DEREFTER TILDELER DET EN CLASS. KAN BRUGES PÅ MANGE MÅDER
 //
