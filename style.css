@@ -1,16 +1,181 @@
-/* ---------------------- ANIMATION KLASSE------------------ */
-.block.is-visible {
-  opacity: 1;
+* {
+  box-sizing: border-box
 }
 
-.block {
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-timing-function: linear;
-  opacity: 0;
-  transition:
-    opacity 1s .25s ease-out;
-  width: 100%
+/* Slideshow container galleri - klassisk W3school eksempel */
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 99;
+  display: none;
+}
+
+.imgSpil {
+  width: 100%;
+  z-index: 99999999;
+  margin-top: 20vh;
+  max-height: 100%;
+}
+
+#lukKnap {
+  position: absolute;
+  top: 0;
+  right: 5vw;
+  width: 100px;
+  height: 100px;
+  font-size: 80px;
+  z-index: 9999999999;
+  display: none;
+  cursor: pointer;
+  color: white;
+}
+
+.startKnap {
+  position: absolute;
+  width: 15vh;
+  bottom: 40vh;
+  left: 50%;
+  z-index: 92;
+  margin-left: -7.5vh;
+}
+
+#galleri {
+  display: none;
+  position: absolute;
+  z-index: 99999999;
+  top: 30vh;
+  left: 0;
+  width: 100vw;
+}
+
+.slideshow-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 99999999;
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 2vw;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.2s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 2vh;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 40px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* ---------------------- SoMe FOLD-OUT KASSEN------------------ */
+.SoMe {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 1vw;
+  left: 5vw;
+  cursor: pointer;
+  width: 150px;
+  overflow:
+    hidden;
+  z-index: 999999999999;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .SoMe:hover {
+  transition: 1s ease-in;
+  width: 100%;
+  z-index: 999999999999;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.links {
+  display: flex;
+  flex-direction: row;
+  padding: 0 18px;
+  overflow: hidden;
+}
+
+/* ---------------------- SoMe FOLD-OUT IKONER------------------ */
+.fa {
+  padding: 25px;
+  font-size: 100px;
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
 }
 
 /* ---------------------- PAGE LOADER------------------ */
@@ -30,16 +195,19 @@
   width: 80vw;
   display: flex;
   flex-direction: column;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2vh;
 }
 
 /* ----------------------VIDEO------------------ */
 #myVideo {
   right: 0;
   bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: 4;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: auto;
 }
 
 /* ----------------------BILLEDER------------------ */
@@ -56,7 +224,7 @@
   position: absolute;
   right: -5vw;
   bottom: -1.5vh;
-  z-index: 3;
+  z-index: 99;
 }
 
 .gfk2 {
@@ -64,7 +232,7 @@
   position: absolute;
   left: -2vw;
   bottom: -1.5vh;
-  z-index: 3;
+  z-index: 99;
 }
 
 .gfk3 {
@@ -72,7 +240,7 @@
   position: absolute;
   right: -22vw;
   bottom: -2.5vh;
-  z-index: 3;
+  z-index: 90;
 }
 
 .label {
@@ -83,11 +251,11 @@
 }
 
 .gfk4 {
-  width: 45vh;
+  width: 35vh;
   position: absolute;
-  right: -20vh;
+  right: -15vh;
   bottom: 0vh;
-  z-index: 2;
+  z-index: 99;
 }
 
 #mainNav {
@@ -111,6 +279,20 @@
 }
 
 /* ----------------------TEKST------------------ */
+/* Forklarende tekst til spil galleri */
+.infotxt {
+  z-index: 2;
+  position: absolute;
+  font-size: 1.5vh;
+  width: 100%;
+  padding-top: 1vh;
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
 /* Brødtekst */
 p {
   font-family: 'Montserrat', sans-serif;
@@ -131,7 +313,7 @@ h3 {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 2vh;
-  padding-top: 1vw;
+  padding-top: 1.5vw;
 }
 
 /* Afgiver af citat */
@@ -234,6 +416,7 @@ body {
 
 #section2 {
   position: relative;
+  width: 100vw;
   height: 100vh;
   background-color: #093A82;
 }
@@ -258,11 +441,12 @@ body {
 
 @media only screen and (min-device-width: 600px) {
   p {
-    font-size: 2.5vh
+    font-size: 2.0vh
   }
 
   h1 {
     font-size: 3vh;
+    margin-top: 10vh;
   }
 
   h3 {
@@ -279,8 +463,15 @@ body {
     overflow: hidden;
   }
 
+  .infotxt {
+    font-size: 2vh;
+    width: 80vw;
+    padding-top: 44vh;
+    padding-left: 25%;
+  }
+
   /* Næste-side knap */
-  .next {
+  .goDown {
     position: absolute;
     bottom: 2vh;
     width: 100%;
@@ -294,7 +485,6 @@ body {
     display: flex;
     flex-direction: column;
     margin: auto;
-    justify-content: center;
   }
 
   /* ----------------------BILLEDER------------------ */
@@ -307,24 +497,32 @@ body {
   }
 
   .gfk1 {
-    width: 23vw;
+    width: 20vw;
     position: absolute;
     right: -2vw;
     bottom: -1.5vh;
   }
 
   .gfk2 {
-    width: 23vw;
+    width: 20vw;
     position: absolute;
     left: -2vw;
     bottom: -1.5vh;
   }
 
   .gfk3 {
-    width: 65vw;
+    width: 55vw;
     position: absolute;
     right: -15vw;
-    bottom: -2.5vh;
+    bottom: -3.5vh;
+  }
+
+  .gfk4 {
+    width: 45vh;
+    position: absolute;
+    right: -20vh;
+    bottom: -5vh;
+    z-index: 2;
   }
 
   .label {
@@ -332,6 +530,46 @@ body {
     position: absolute;
     left: -12vh;
     bottom: -15.5vh;
+  }
+
+  /* SPIL GALLERI */
+  .startKnap {
+    bottom: 15vh;
+  }
+
+  #galleri {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 90vh;
+  }
+
+  .slideshow-container {
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    margin: 0;
+  }
+
+  /* ---------------------- SoMe FOLD-OUT KASSEN------------------ */
+  .SoMe {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 1vw;
+    left: 5vw;
+    cursor: pointer;
+    width: 80px;
+    overflow:
+      hidden;
+    z-index: 999999999999;
+  }
+
+  .fa {
+    font-size: 60px;
+    width: 150px;
   }
 }
 
@@ -344,7 +582,7 @@ body {
     font-size: 3vh;
     margin: 0;
     margin-bottom: 5vh;
-    margin-top: -10vh;
+    margin-top: 10vh;
   }
 
   h3 {
@@ -352,9 +590,22 @@ body {
     padding-top: 1vw;
   }
 
+  h3:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+  }
+
   h4 {
     font-size: 1.5vh;
-    padding-bottom: 1vw;
+    padding-bottom: 2vw;
+    padding-top: 0.4vw;
+  }
+
+  .infotxt {
+    font-size: 2vh;
+    width: 80vw;
+    padding-top: 44vh;
+    padding-left: 25%;
   }
 
   .main {
@@ -362,7 +613,7 @@ body {
   }
 
   /* Næste-side knap */
-  .next {
+  .goDown {
     position: absolute;
     bottom: 2vh;
     width: 100%;
@@ -375,7 +626,6 @@ body {
     width: 60vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     margin: auto;
   }
 
@@ -409,10 +659,92 @@ body {
     bottom: -2.5vh;
   }
 
+  .gfk4 {
+    width: 45vh;
+    position: absolute;
+    right: -20vh;
+    bottom: 0vh;
+    z-index: 2;
+  }
+
   .label {
     width: 40vh;
     position: absolute;
     left: -12vh;
     bottom: -15.5vh;
+  }
+
+  .imgSpil {
+    max-height: 100%;
+    margin-top: 0;
+  }
+
+  #lukKnap {
+    top: 88vh;
+    right: -0.5vh;
+  }
+
+  .prev, .next {
+    font-size: 55px;
+  }
+
+  .text {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 4vh;
+  }
+
+  /* SPIL GALLERI */
+  #galleri {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 90vh;
+  }
+
+  .slideshow-container {
+    width: 100vw;
+    height: 90vh;
+    position: relative;
+    margin: 0;
+  }
+
+  .startKnap {
+    width: 25vh;
+    bottom: 25vh;
+    left: 50%;
+    z-index: 92;
+    margin-left: -12.5vh;
+  }
+
+  /* ---------------------- SoMe FOLD-OUT KASSEN------------------ */
+  .SoMe {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 1vw;
+    left: 5vw;
+    cursor: pointer;
+    width: 120px;
+    overflow:
+      hidden;
+    z-index: 999999999999;
+  }
+}
+
+/* VIDEO MEDIA QUERIES!! */
+@media (min-aspect-ratio: 16/9) {
+  #myVideo {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  #myVideo {
+    width: auto;
+    height: 100%;
   }
 }
