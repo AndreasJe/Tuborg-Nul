@@ -17,7 +17,6 @@
 .imgSpil {
   width: 100%;
   z-index: 99999999;
-  margin-top: 20vh;
   max-height: 100%;
 }
 
@@ -37,7 +36,7 @@
 .startKnap {
   position: absolute;
   width: 15vh;
-  bottom: 40vh;
+  bottom: 10vh;
   left: 50%;
   z-index: 92;
   margin-left: -7.5vh;
@@ -112,7 +111,7 @@
   font-size: 40px;
   padding: 8px 12px;
   position: absolute;
-  top: 0;
+  top: -25vh;
 }
 
 /* ---------------------- SoMe FOLD-OUT KASSEN------------------ */
@@ -121,9 +120,9 @@
   flex-direction: row;
   position: fixed;
   bottom: 1vw;
-  left: 5vw;
+  left: 2vw;
   cursor: pointer;
-  width: 150px;
+  width: 80px;
   overflow:
     hidden;
   z-index: 999999999999;
@@ -147,8 +146,8 @@
 /* ---------------------- SoMe FOLD-OUT IKONER------------------ */
 .fa {
   padding: 25px;
-  font-size: 100px;
-  width: 150px;
+  font-size: 40px;
+  width: 80px;
   text-align: center;
   text-decoration: none;
   margin: 5px 2px;
@@ -236,26 +235,26 @@
 }
 
 .gfk3 {
-  width: 65vw;
+  width: 45vw;
   position: absolute;
-  right: -22vw;
+  right: -12vw;
   bottom: -2.5vh;
   z-index: 90;
 }
 
 .label {
-  width: 40vh;
+  width: 60vw;
   position: absolute;
   left: -12vh;
   bottom: -15.5vh;
 }
 
 .gfk4 {
-  width: 35vh;
+  width: 25vh;
   position: absolute;
-  right: -15vh;
+  right: -5vh;
   bottom: 0vh;
-  z-index: 99;
+  z-index: 87;
 }
 
 #mainNav {
@@ -439,7 +438,7 @@ body {
   background-color: #093A82;
 }
 
-@media only screen and (min-device-width: 600px) {
+@media only screen and (min-device-width: 760px) {
   p {
     font-size: 2.0vh
   }
@@ -481,7 +480,7 @@ body {
 
   .content {
     height: 100vh;
-    width: 60vw;
+    width: 65vw;
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -511,16 +510,16 @@ body {
   }
 
   .gfk3 {
-    width: 55vw;
+    width: 35vw;
     position: absolute;
-    right: -15vw;
+    right: -5vw;
     bottom: -3.5vh;
   }
 
   .gfk4 {
-    width: 45vh;
+    width: 36vh;
     position: absolute;
-    right: -20vh;
+    right: -10vh;
     bottom: -5vh;
     z-index: 2;
   }
