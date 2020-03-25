@@ -125,6 +125,54 @@
     <!-- //Section 3 -->
     <div class="main" id="section3">
       <div class="content">
+
+        <h2>Salg af alkoholfri øl i Danmark i de sidste 5 år</h2>
+        <svg id="barchart" viewbox="-20 -10 230 120">
+
+          <g id="chart">
+            <text x="-30" y="-15">liter</text>
+            <text x="-30" y="1">4.500.000</text>
+            <text x="-30" y="21">4.000.000</text>
+            <text x="-30" y="41">3.500.000</text>
+            <text x="-30" y="61">3.000.000</text>
+            <text x="-30" y="81">2.500.000</text>
+            <text x="-30" y="101">2.000.000</text>
+            <text x="-30" y="121">1.500.000</text>
+
+            <text x="15" y="128">2015</text>
+            <text x="45" y="128">2016</text>
+            <text x="75" y="128">2017</text>
+            <text x="105" y="128">2018</text>
+            <text x="135" y="128">2019</text>
+
+
+
+            <!--            <line x1="0" x2="0" y1="120" y2="0" />-->
+            <line x1="0" x2="160" y1="0" y2="0" />
+            <line x1="0" x2="160" y1="20" y2="20" />
+            <line x1="0" x2="160" y1="40" y2="40" />
+            <line x1="0" x2="160" y1="60" y2="60" />
+            <line x1="0" x2="160" y1="80" y2="80" />
+            <line x1="0" x2="160" y1="100" y2="100" />
+            <line x1="0" x2="160" y1="120" y2="120" />
+          </g>
+
+
+
+          <g class="bars">
+
+            <line x1="20" x2="20" y1="10" y2="120" data-liter="2.453.000" data-year="2015" />
+            <line x1="50" x2="50" y1="50" y2="120" data-liter="2.793.000" data-year="2016" />
+            <line x1="80" x2="80" y1="20" y2="120" data-liter="3.283.000" data-year="2017" />
+            <line x1="110" x2="110" y1="20" y2="120" data-liter="4.319.000" data-year="2018" />
+            <line x1="140" x2="140" y1="20" y2="120" data-liter="4.699.000" data-year="2019" />
+
+          </g>
+
+          <p id="output"></p>
+
+
+        </svg>
       </div><a class="goDown" href="#section4"><img src="img/pilen-hvid.svg" class="pil" alt="Gå videre til næste side"></a>
 
     </div>
