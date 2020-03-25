@@ -12,34 +12,30 @@ h2 {
 
 #barchart {
   margin-top: 0;
-  color: white;
   margin: auto;
+  margin-right: -2vw;
   max-width: 500px;
   overflow: visible;
   z-index: 9999;
 }
 
 #chart line {
-  color: white;
-  color: white;
   stroke: #555;
   stroke-width: .3;
 }
 
 text {
-  color: white;
+  fill: white;
   font-size: .4rem;
   font-family: sans-serif;
 }
 
 .bars {
-  color: white;
   stroke: rgba(9, 58, 130, 0.92);
   stroke-width: 20;
 }
 
 #output {
-  color: white;
   position: absolute;
   background-color: rgba(9, 58, 130, 0.61);
   padding: .3rem;
