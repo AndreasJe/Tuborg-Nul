@@ -12,6 +12,7 @@
 
 /* SØJLEDIAGRAM */
 h2 {
+  margin-top: 10vh;
   color: white;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
@@ -794,20 +795,5 @@ body {
     bottom: 0;
     left: 0;
     position: absolute;
-  }
-}
-
-/* VIDEO MEDIA QUERIES!! */
-@media (min-aspect-ratio: 16/9) {
-  #myVideo {
-    width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-aspect-ratio: 16/9) {
-  #myVideo {
-    width: auto;
-    height: 100%;
   }
 }

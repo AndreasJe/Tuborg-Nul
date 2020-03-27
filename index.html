@@ -200,6 +200,46 @@
 
   </div>
 
+  <script type="text/javascript">
+    //script til søjlediagram
+
+    const values = [39, 52, 66, 108, 128];
+    const output = document.querySelector("#output");
+    const total = values.reduce((sum, value) => sum + value);
+    //med metoden "reduce" kan jeg udregne summen af tallene i mit array
+    document.querySelectorAll(".bars line").forEach((bar, i) => {
+      bar.setAttribute("y1", 120 - values[i]);
+      bar.setAttribute("data-value", values[i]);
+      bar.setAttribute("data-procent", values[i] / total * 100);
+      bar.addEventListener("mouseover", e => vis(e)); //vis data i output ved mouseover
+      bar.addEventListener("mouseout", skjul); // skjul data ved mouseout
+    });
+
+
+    //denne function viser <p> output-element og ændrer textContent dynamisk
+    function vis(e) { //e henviser her til mouseover eventet
+      //        output.textContent = Math.round(e.target.dataset.procent) + " %";
+      output.textContent = e.target.dataset.liter + " liter";
+      //        output.textContent = e.target.dataset.year + ": " + e.target.dataset.liter + " liter";
+      output.style.display = "block";
+      window.addEventListener("mousemove", followMouse); // NB: dennne eventlistener er på window
+
+    }
+
+
+
+    //denne function får output-element til at følge musemarkøren, hvis
+    function followMouse(e) { //e henviser her til mousemove eventet
+      output.style.top = (e.clientY - 5) + 'px';
+      output.style.left = (e.clientX) + 'px';
+    }
+
+    //denne function skjuler output-element og fjerner eventListener'en fra window
+    function skjul() {
+      output.style.display = "none";
+      window.removeEventListener("mousemove", followMouse);
+    }
+  </script>
 </body>
 
 </html>
